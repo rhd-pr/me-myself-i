@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inital-scale=1.O">
+    <title>My Webpage</title>
+    <script src="https://kit.fontawesome.com/23d61ac7bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="me.css">
+</head>
+<body>
+    <div id="header">
+            <nav>
+                <h2 class="logo">RHE<span>ED.</span></h2>
+            </nav>
+
+            <div class="content">
+                <h4>Hello! My name is</h4>
+                <h1>Rheed <span>Pura</span></h1>
+                <h3>1st Year - BSIT student.</h3>
+            </div>
+    </div> 
+    <!---------------about----------->
+    <div id="aboutme">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="me.jpg" alt="me">
+                </div>
+                <div class="about-col-2">
+                    <h2><span>Me</span>-Myself-I</h2>
+                    <p>My name is Rheed Pura, and I am embarking on an exhilarating academic journey as a first-year college 
+                        student at the esteemed University of Perpetual Help System DALTA (UPHSD). Currently enrolled in the Bachelor 
+                        of Science in Information Technology program, I am thrilled to share a glimpse into my aspirations, motivations, 
+                        and the exciting path that lies ahead.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('information')">Personal Information</p>
+                        <p class="tab-links" onclick="opentab('academic')">Academic Background</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="information">
+                        <ul>
+                            <li><span>Full Name</span><br>
+                            Rheed Escolano Pura</li>
+                            <li><span>Age</span><br>
+                            18 years old</li>
+                            <li><span>Date of Birth</span><br>
+                            March 17, 2005</li>
+                            <li><span>Mothers Name</span><br>
+                            Mercidita Estaras Escolano</li>
+                            <li><span>Fathers Name</span><br>
+                            Antonio Erlano Pura</li>
+                        </ul>
+                        <ul>
+                            <li><span>Place of Birth</span><br>
+                            Tabi, Gubat, Sorsogon</li>
+                            <li><span>Address</span><br>
+                            Molino VII, Bacoor, Cavite</li>
+                            <li><span>E-mail address</span><br>
+                            rheedpura17@gmail.com</li>
+                            <li><span>Phone number</span><br>
+                            09519326617</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="academic">
+                        <ul>
+                            <li><span>Tabi Elementary School</span><br>
+                            Grade 1 - 5th Honors <br>
+                            Grade 2 - 4th Honors<br>
+                            Grade 3 - 3rd Honors<br>
+                            Grade 4 - 1st Honors <br>
+                            Grade 5 - 1st Honors <br>
+                            Grade 6 - With High Honors (Valedictorian)</li>
+                            <li><span>Gubat National High School</span><br>
+                            Grade 7-10 (STE class) - With Honors <br>
+                            Grade 11 and 12 - With Honors</li>
+                            <li><span>University of Perpetual Health System - Dalta</span><br>
+                            Bachelor of Science in Information technology (BSIT) - 1st Year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quotes">
+        <div class="container">
+            <h2>Me-<span>Myself</span>-I</h2>
+            <div class="quote-list">
+                <div class="quote">
+                    <img class="family" src="family.jpg" alt="family">
+                </div>
+                <div class="quote">
+                    <img src="love.jpg" alt="love">
+                </div>
+                <div class="quote">
+                    <img class="friends" src="friends.jpg" alt="friends">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="i">
+    <div class="main">
+        <img src="me.jpg">
+        <div class="i-text">
+            <h2>Me-Myself-<span>I</span></h2>
+            <p>Choosing Information Technology as my major was a natural decision due to my lifelong fascination with the dynamic world of technology.
+                 Enrolling in the Information Technology program at UPHSD was an easy choice, given the university's outstanding reputation for its 
+                 comprehensive and innovative curriculum. What drew me to this major was the emphasis on practical applications, aligning perfectly 
+                 with my hands-on learning style. The faculty's expertise and state-of-the-art facilities create an environment fostering creativity 
+                 and critical thinking, preparing me for the challenges of the IT industry. My long-term career goal is to become a proficient IT 
+                 professional contributing to innovative solutions. The program at UPHSD not only equips me with technical skills but also hones 
+                 my problem-solving and teamwork abilities. I am excited about being part of groundbreaking developments in artificial intelligence, 
+                 cybersecurity, and data analytics as the IT industry evolves. UPHSD's commitment to staying abreast of industry trends gives me 
+                 confidence that I am on the right path to achieving my career aspirations.</p>
+        </div>
+    </div>
+    </section>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+    
+        window.onscroll = function () {
+        var navBar = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            navBar.classList.add('fixed-nav');
+        } else {
+            navBar.classList.remove('fixed-nav');
+        }
+    };
+    </script>
+    
+</body>
+</html>
